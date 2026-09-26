@@ -47,13 +47,14 @@
 
   .btn{
     display:inline-flex; align-items:center; gap:10px;
-    background:var(--violet); color:var(--paper);
-    border:none; padding:16px 26px; border-radius:999px;
+    background:var(--citrus); color:var(--violet-deep);
+    border:none; padding:17px 30px; border-radius:999px;
     font-family:'Space Grotesk', sans-serif; font-weight:600; font-size:1rem;
     cursor:pointer; transition:transform .15s ease, background .15s ease;
   }
-  .btn:hover{background:var(--violet-deep); transform:translateY(-1px);}
+  .btn:hover{background:#FFD95A; transform:translateY(-1px);}
   .btn:focus-visible, button:focus-visible, a:focus-visible{outline:3px solid var(--citrus); outline-offset:3px;}
+  .claim-action{display:flex; justify-content:center;}
 
   .card-visual{position:relative; aspect-ratio:1.55/1; border-radius:22px; background:linear-gradient(135deg, var(--violet), var(--violet-deep)); padding:28px; color:var(--paper); overflow:hidden;}
   .card-visual::after{content:""; position:absolute; right:-40px; top:-40px; width:180px; height:180px; border-radius:50%; background:var(--citrus); opacity:.18;}
@@ -63,16 +64,6 @@
 
   section{padding:48px 0;}
   .eyebrow{font-size:.9rem; color:var(--citrus-deep); font-weight:600; letter-spacing:0; margin-bottom:10px;}
-  .steps{display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:28px;}
-  @media (max-width:760px){ .steps{grid-template-columns:1fr;} }
-  .step{border:1px solid color-mix(in srgb, var(--ink) 18%, transparent); border-radius:16px; padding:24px;}
-  .step .n{font-family:'Fraunces', serif; font-weight:700; color:var(--citrus-deep); font-size:1.3rem;}
-  .step h3{font-family:'Space Grotesk', sans-serif; font-weight:600; font-size:1.02rem; margin:8px 0 6px;}
-  .step p{margin:0; color:var(--muted); font-size:1rem; line-height:1.65;}
-
-  .brands{display:flex; flex-wrap:wrap; gap:12px; margin-top:24px;}
-  .brand-pill{border:1px solid color-mix(in srgb, var(--ink) 18%, transparent); border-radius:999px; padding:9px 18px; font-size:.95rem; color:var(--muted);}
-
   footer{padding:36px 24px 44px; text-align:center; color:var(--muted); font-size:.9rem; line-height:1.55;}
 
   @media (max-width:600px){
@@ -110,7 +101,9 @@
     <div>
       <h1>Claim a $50 gift card, your pick of store.</h1>
       <p class="sub">Complete one short offer to verify you're a real person, choose Amazon, Target, or Walmart, and we'll email your code within 24 hours.</p>
-      <button class="btn" id="claimBtn">Claim your reward</button>
+      <div class="claim-action">
+        <button class="btn" id="claimBtn">Claim your reward</button>
+      </div>
       <p class="terms-line">One offer required per reward. Limited to one claim per household. See terms in the offer window before you start.</p>
     </div>
     <div class="card-visual">
@@ -120,24 +113,6 @@
     </div>
   </section>
 
-  <section>
-    <div class="eyebrow">HOW IT WORKS</div>
-    <h2 style="font-weight:600; font-size:1.5rem;">Three steps, no catch</h2>
-    <div class="steps">
-      <div class="step"><div class="n">1</div><h3>Pick your card</h3><p>Amazon, Target, or Walmart — you choose after you verify.</p></div>
-      <div class="step"><div class="n">2</div><h3>Complete one offer</h3><p>A short signup or survey from one of our partners, usually under 3 minutes.</p></div>
-      <div class="step"><div class="n">3</div><h3>Get your code</h3><p>We email your gift card code within 24 hours of the offer confirming.</p></div>
-    </div>
-  </section>
-
-  <section>
-    <div class="eyebrow">AVAILABLE CARDS</div>
-    <div class="brands">
-      <span class="brand-pill">Amazon</span>
-      <span class="brand-pill">Target</span>
-      <span class="brand-pill">Walmart</span>
-    </div>
-  </section>
 </main>
 
 <footer>
